@@ -95,7 +95,7 @@ HTMLActuator.prototype.updateScore = function (score) {
   this.score = score;
 
   this.scoreContainer.textContent = this.score;
-  window.minSearchTime = this.score / 100 >> 1;
+  window.minSearchTime = Math.pow(this.score / 10000, 10);
 
   if (difference > 0) {
     var addition = document.createElement("div");
